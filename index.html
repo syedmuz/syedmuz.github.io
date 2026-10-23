@@ -69,7 +69,7 @@ footer{padding:24px 0 40px;color:var(--slate);font-size:.85rem}
 <script src="data.js"></script>
 <script>
 (function () {
-  var S = window.SITE || {};
+  var S = (typeof SITE !== "undefined" && SITE) || window.SITE || {};
   function el(tag, cls, text) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
